@@ -2,17 +2,22 @@ import { DataTypes } from 'sequelize';
 import sequelize from '../initials/dbConnection.js';
 
 const ClassSeats = sequelize.define('class_seats', {
-  train_no: {
+  id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
+    autoIncrement: true,
+  },
+  train_no: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
   },
   date_of_journey: {
     type: DataTypes.DATE,
-    primaryKey: true,
+    allowNull: false,
   },
   class: {
     type: DataTypes.STRING(50),
-    primaryKey: true,
+    allowNull: false,
   },
   fare: {
     type: DataTypes.INTEGER,

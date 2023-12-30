@@ -7,19 +7,23 @@ const Users = sequelize.define('users', {
     primaryKey: true,
     autoIncrement: true,
   },
-  password: {
-    type: DataTypes.STRING(50),
-    allowNull: false,
+  name:{
+    type:DataTypes.STRING(50),
+    allowNull:false,
   },
-  email_id: {
+  email: {
     type: DataTypes.STRING(50),
     allowNull: false,
     unique: true,
   },
-  mobile_no: {
+  mobile: {
     type: DataTypes.STRING(10),
     allowNull: false,
     unique: true,
+  },
+  password: {
+    type: DataTypes.STRING(50),
+    allowNull: false,
   },
   dob: {
     type: DataTypes.DATE,
